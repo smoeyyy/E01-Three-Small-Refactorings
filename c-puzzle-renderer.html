@@ -23,7 +23,6 @@
       { label: "Stack", tiles: [{position:[135, 55], color:"#248a87"}, {position:[175, 80], color:"#e6a23c"}, {position:[215, 105], color:"#6555aa"}]},
     ];
     let layoutIndex = 0;
-    const options = { experimentalShadows: false };
 
     function paintRectangle(x, y, color) {
       ctx.fillStyle = color;
@@ -37,9 +36,6 @@
       layout.tiles.forEach(({position:[x, y], color: color}) => {
         paintRectangle(x, y, color);
       });
-      // If options.experimentalShadows, try drawing a fancy second pass later.
-      // ctx.shadowBlur = 12;
-      // ctx.shadowColor = "#ffffff";
     }
 
     document.querySelector("#change").addEventListener("click", () => {
